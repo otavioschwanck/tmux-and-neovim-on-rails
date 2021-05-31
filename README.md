@@ -40,7 +40,7 @@ After this, have an nice work!
 ## Basic
 
 | Command | Description |
-|-------+-----
+|-------|-----|
 SPC SPC | Find a file |
 | SPC s p | Search on project |
 | SPC s P | Search on project and edit occurrences |
