@@ -49,7 +49,7 @@ SPC SPC | Find a file |
 | SPC gg | Run lazygit (i really miss magit =C) |
 | C-SPC | Switch buffer |
 | C-e | Nerdtree find |
-| C-Tabv | Nerdtree Toggle |
+| C-Tab | Nerdtree Toggle |
 
 ## Editing
 
@@ -70,7 +70,7 @@ SPC SPC | Find a file |
 | SPC rh | Go to Helper  |
 | SPC ri | Go to Initializer  |
 | SPC rl | Go to Locale  |
-| SPC r | Go to@Emailer  |
+| SPC r@ | Go to Emailer  |
 | SPC rn | Go to Migration  |
 | SPC rm | Go to Model  |
 | SPC ra | Go to Admin  |
