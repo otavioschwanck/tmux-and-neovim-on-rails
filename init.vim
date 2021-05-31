@@ -367,3 +367,5 @@ nmap <M-9> <Plug>AirlineSelectTab
 " file stuff
 nmap <Leader>fD :Unlink 
 nmap <Leader>fR :Rename 
+nnoremap 0 ^
+vmap 0 ^
