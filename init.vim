@@ -42,6 +42,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'michaeljsmith/vim-indent-object'
   Plug 'AndrewRadev/switch.vim'
   Plug 'maxbrunsfeld/vim-yankstack'
+  Plug 'easymotion/vim-easymotion'
 
   " Ruby on Rails
   Plug 'tpope/vim-rails'
@@ -122,13 +123,13 @@ nnoremap <leader>fr :so ~/.config/nvim/init.vim <cr>
 let g:rspec_command = ':!tmux send-keys -t 2 "bundle exec rspec {spec}" ENTER; tmux select-window -t 2'
 
 " vim-rspec mappings
-map <Leader>tv :call RunCurrentSpecFile()<CR>
-map <Leader>ts :call RunNearestSpec()<CR>
-map <Leader>tr :call RunLastSpec()<CR>
-map <Leader>ta :call RunAllSpecs()<CR>
+map <silent><Leader>tv :call RunCurrentSpecFile()<CR>
+map <silent><Leader>ts :call RunNearestSpec()<CR>
+map <silent><Leader>tr :call RunLastSpec()<CR>
+map <silent><Leader>ta :call RunAllSpecs()<CR>
 
-map <Leader>rr :!tmux send-keys -t 4 "bundle exec rails console" ENTER && tmux select-window -t 4<CR>
-map <Leader>rR :!tmux send-keys -t 3 C-c C-c && tmux send-keys -t 3 "bundle exec rails server" ENTER<CR>
+map <silent><Leader>rr :!tmux send-keys -t 4 "bundle exec rails console" ENTER && tmux select-window -t 4<CR>
+map <silent><Leader>rR :!tmux send-keys -t 3 C-c C-c && tmux send-keys -t 3 "bundle exec rails server" ENTER<CR>
 
 " Timeout lenght to improve performance
 set ttimeoutlen=100
@@ -260,17 +261,17 @@ nnoremap <silent><esc> :noh<return><esc>
 nnoremap <esc>^[" <esc>^[
 
 " Run rubocop on current file
-nmap <Leader>= :!bundle exec rubocop -a % <CR>
-nmap <Leader>+ :!bundle exec rubocop -a <CR>
+nmap <silent><Leader>= :!bundle exec rubocop -a % <CR>
+nmap <silent><Leader>+ :!bundle exec rubocop -a <CR>
 
-nmap <Leader><Enter><Enter> :!tmux new-window -n "rspec" && tmux new-window -n "server" && tmux new-window -n "Console" && tmux select-window -t 1<CR>
-nmap <Leader><Enter><Esc> :!tmux kill-window -a<CR>
+nmap <silent><Leader><Enter><Enter> :!tmux new-window -n "rspec" && tmux new-window -n "server" && tmux new-window -n "Console" && tmux select-window -t 1<CR>
+nmap <silent><Leader><Enter><Esc> :!tmux kill-window -a<CR>
 
 " Project Search with Ag
 nmap <Leader>sp :Ag 
 nmap <Leader>sP :CocSearch 
 
-nnoremap <Leader><space> :FZF<CR>
+nmap <Leader><space> :FZF<CR>
 
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
@@ -319,7 +320,7 @@ function SendToConsole() range
   echo system('tmux send-keys -t 4 '.shellescape(join(getline(a:firstline, a:lastline), "\n")).' Enter; tmux select-window -t 4')
 endfunction
 
-vmap <C-s> :call SendToConsole() <CR>
+vmap <silent><C-s> :call SendToConsole() <CR>
 
 nmap <Leader>d Obyebug<Esc>
 nmap <Leader>D O<% byebug %><Esc>
@@ -330,8 +331,34 @@ map t <Plug>Sneak_t
 map T <Plug>Sneak_T
 
 " Yankstack
-nmap <C-p>p <Plug>yankstack_substitute_older_paste
+nmap <C-p> <Plug>yankstack_substitute_older_paste
 nmap <C-P> <Plug>yankstack_substitute_newer_paste
 
 nmap <leader>P <Plug>yankstack_substitute_newer_paste
 nmap <leader>P <Plug>yankstack_substitute_newer_paste
+
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+
+nmap <Leader>s <Plug>(easymotion-overwin-f2) 
+vmap <Leader>s <Plug>(easymotion-overwin-f2)
+
+" Change tabs with alt
+" Airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='gruvbox'
+let g:airline#extensions#tabline#tab_nr_type = 1
+let g:airline#extensions#tabline#formatter = 'default'
+let g:airline#extensions#tabline#fnametruncate = 16
+let g:airline#extensions#tabline#fnamecollapse = 2
+let g:airline#extensions#tabline#buffer_idx_mode = 1
+
+" Change tabs with ALT + 1...9
+nmap <M-1> <Plug>AirlineSelectTab1
+nmap <M-2> <Plug>AirlineSelectTab2
+nmap <M-3> <Plug>AirlineSelectTab3
+nmap <M-4> <Plug>AirlineSelectTab4
+nmap <M-5> <Plug>AirlineSelectTab5
+nmap <M-6> <Plug>AirlineSelectTab6
+nmap <M-7> <Plug>AirlineSelectTab7
+nmap <M-8> <Plug>AirlineSelectTab8
+nmap <M-9> <Plug>AirlineSelectTab

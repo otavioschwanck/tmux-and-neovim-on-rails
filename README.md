@@ -24,6 +24,8 @@ git clone https://github.com/otavioschwanck/tmux-and-neovim-on-rails.git ~/.conf
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
+copy .tmux.conf to your home directory
+
 nvim +PlugInstall
 
 ```
@@ -41,7 +43,7 @@ After this, have an nice work!
 
 | Command | Description |
 |-------|-----|
-SPC SPC | Find a file |
+| SPC SPC | Find a file |
 | SPC s p | Search on project |
 | SPC s P | Search on project and edit occurrences |
 | SPC r r | Run rails console |
@@ -50,6 +52,16 @@ SPC SPC | Find a file |
 | C-SPC | Switch buffer |
 | C-e | Nerdtree find |
 | C-Tab | Nerdtree Toggle |
+
+## Movimentation
+
+| Command | Description |
+|-------|-----|
+| ]g | Next git hunk |
+| [g | Previous git hunk |
+| gd | Go to definition |
+| gD | Find Usages |
+| gy | Go to type definition |
 
 ## Editing
 
@@ -61,6 +73,8 @@ SPC SPC | Find a file |
 | C-a | Toggle Switch (change from symbols to stgring, do end, etc) |
 | gS | Toggle into multiple lines |
 | gJ | Toggle into single line (on the first line) |
+| C-y | Copy selected to system clipboard |
+| C-p | Cycle to yank history (use after pasting something) |
 
 ## Rails Stuff
 
