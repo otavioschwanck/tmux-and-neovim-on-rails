@@ -24,7 +24,7 @@ git clone https://github.com/otavioschwanck/tmux-and-neovim-on-rails.git ~/.conf
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
-copy .tmux.conf to your home directory
+cp ~/.config/nvim/.tmux.conf ~/
 
 nvim +PlugInstall
 
