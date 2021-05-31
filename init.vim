@@ -44,6 +44,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'maxbrunsfeld/vim-yankstack'
   Plug 'easymotion/vim-easymotion'
   Plug 'tpope/vim-eunuch'
+  Plug 'jeetsukumaran/vim-indentwise'
 
   " Ruby on Rails
   Plug 'tpope/vim-rails'
@@ -370,12 +371,10 @@ nmap <Leader>fR :Rename
 nnoremap 0 ^
 vmap 0 ^
 
-https://github.com/otavioschwanck/tmux-and-neovim-on-rails
-
 nnoremap 0 ^
 
-nmap <C-j> ]m
-nmap <C-k> [m
-vmap <C-j> ]m
-vmap <C-k> [m
+nmap <C-j> ]=
+nmap <C-k> [=
+vmap <C-j> ]=
+vmap <C-k> [=
  
