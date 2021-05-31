@@ -75,6 +75,8 @@ After this, have an nice work!
 | gJ | Toggle into single line (on the first line) |
 | C-y | Copy selected to system clipboard |
 | C-p | Cycle to yank history (use after pasting something) |
+| SPC fD | Delete current file |
+| SPC fR | Rename current file |
 
 ## Rails Stuff
 

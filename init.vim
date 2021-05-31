@@ -43,6 +43,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'AndrewRadev/switch.vim'
   Plug 'maxbrunsfeld/vim-yankstack'
   Plug 'easymotion/vim-easymotion'
+  Plug 'tpope/vim-eunuch'
 
   " Ruby on Rails
   Plug 'tpope/vim-rails'
@@ -362,3 +363,7 @@ nmap <M-6> <Plug>AirlineSelectTab6
 nmap <M-7> <Plug>AirlineSelectTab7
 nmap <M-8> <Plug>AirlineSelectTab8
 nmap <M-9> <Plug>AirlineSelectTab
+
+" file stuff
+nmap <Leader>fD :Unlink 
+nmap <Leader>fR :Rename 
