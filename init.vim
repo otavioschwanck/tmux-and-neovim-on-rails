@@ -153,15 +153,15 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 nnoremap <silent> <leader><tab> :NERDTreeToggle<CR>
 nnoremap <silent> <leader>e :NERDTreeFind<CR>
 
-" use alt+hjkl to move between split/vsplit panels
-tnoremap <M-h> <C-\><C-n><C-w>h
-tnoremap <M-j> <C-\><C-n><C-w>j
-tnoremap <M-k> <C-\><C-n><C-w>k
-tnoremap <M-l> <C-\><C-n><C-w>l
-nnoremap <M-h> <C-w>h
-nnoremap <M-j> <C-w>j
-nnoremap <M-k> <C-w>k
-nnoremap <M-l> <C-w>l
+" use Ctrl + Alft + hjkl to move between split/vsplit panels
+tnoremap <C-M-h> <C-\><C-n><C-w>h
+tnoremap <C-M-j> <C-\><C-n><C-w>j
+tnoremap <C-M-k> <C-\><C-n><C-w>k
+tnoremap <C-M-l> <C-\><C-n><C-w>l
+nnoremap <C-M-h> <C-w>h
+nnoremap <C-M-j> <C-w>j
+nnoremap <C-M-k> <C-w>k
+nnoremap <C-M-l> <C-w>l
 nnoremap <C-Space> <C-w><C-w>
 nnoremap <M-o> <C-w><C-w>
 
@@ -195,8 +195,6 @@ vmap - $
 " Map Ctrl-Backspace to delete the previous word in insert mode.
 imap <C-BS> <C-W>
 imap <M-BS> <C-W>
-
-map <C-v> <C-r>"<CR>
 
 " Make  Y copy until end of the line
 nnoremap Y y$
