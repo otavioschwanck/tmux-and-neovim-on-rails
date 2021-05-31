@@ -77,6 +77,7 @@ After this, have an nice work!
 | C-p | Cycle to yank history (use after pasting something) |
 | SPC fD | Delete current file |
 | SPC fR | Rename current file |
+| C-e | Start emmet |
 
 ## Rails Stuff
 
