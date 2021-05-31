@@ -321,7 +321,17 @@ function SendToConsole() range
   echo system('tmux send-keys -t 4 '.shellescape(join(getline(a:firstline, a:lastline), "\n")).' Enter; tmux select-window -t 4')
 endfunction
 
+function SendToRspec() range
+  echo system('tmux send-keys -t 2 '.shellescape(join(getline(a:firstline, a:lastline), "\n")).' Enter; tmux select-window -t 2')
+endfunction
+
+function SendToServer() range
+  echo system('tmux send-keys -t 3 '.shellescape(join(getline(a:firstline, a:lastline), "\n")).' Enter; tmux select-window -t 3')
+endfunction
+
 vmap <silent><C-s> :call SendToConsole() <CR>
+vmap <Silent><C-S> :call SendToRspec() <CR>
+vmap <Silent><C-M-s> :call SendToServer() <CR>
 
 nmap <Leader>d Obyebug<Esc>
 nmap <Leader>D O<% byebug %><Esc>

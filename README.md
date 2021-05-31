@@ -115,6 +115,8 @@ See more: https://www.youtube.com/watch?v=NZO8KjNbwJk
 | Command | Description |
 |-------|--------|
 | C-s (On Vim, in visual mode) | Send selected text to rails console |
+| C-S (On Vim, in visual mode) | Send selected text to rspec |
+| C-M-S (On Vim, in visual mode) | Send selected text to server |
 | C-a 1,2,3,4 | Switch tmux window |
 | C-a w | View and tmux windows |
 | C-a c | Create new tmux window |
