@@ -38,7 +38,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'kremso/vim-spectator'
   Plug 'AndrewRadev/splitjoin.vim'
   Plug 'AndrewRadev/sideways.vim'
-  Plug 'AndrewRadev/tagalong.vim'
   Plug 'michaeljsmith/vim-indent-object'
   Plug 'AndrewRadev/switch.vim'
   Plug 'maxbrunsfeld/vim-yankstack'
@@ -165,7 +164,7 @@ nnoremap <C-M-h> <C-w>h
 nnoremap <C-M-j> <C-w>j
 nnoremap <C-M-k> <C-w>k
 nnoremap <C-M-l> <C-w>l
-nnoremap <C-Space> <C-w><C-w>
+nnoremap <silent><C-Space> <C-w><C-w>
 nnoremap <M-o> <C-w><C-w>
 
 " Change tabs with ALT + 1...9
@@ -378,3 +377,5 @@ nmap <C-k> [=
 vmap <C-j> ]=
 vmap <C-k> [=
  
+let g:user_emmet_leader_key='<C-e>'
+call yankstack#setup()
