@@ -40,8 +40,8 @@ After this, have an nice work!
 ## Basic
 
 | Command | Description |
-| +-------+ | +--------+ |
-| SPC SPC | Find a file |
+|-------+-----
+SPC SPC | Find a file |
 | SPC s p | Search on project |
 | SPC s P | Search on project and edit occurrences |
 | SPC r r | Run rails console |
@@ -54,7 +54,7 @@ After this, have an nice work!
 ## Editing
 
 | Command | Description |
-| +-------+ | +--------+ |
+|-------|--------|
 | C-h | Swap args to left |
 | C-l | Swap args to right |
 | C-n | Start multiple cursors |
@@ -65,7 +65,7 @@ After this, have an nice work!
 ## Rails Stuff
 
 | Command | Description |
-| +-------+ | +--------+ |
+|-------|--------|
 | SPC ru | Go to Fixtures  |
 | SPC rh | Go to Helper  |
 | SPC ri | Go to Initializer  |
@@ -83,7 +83,7 @@ After this, have an nice work!
 ## Rspec
 
 | Command | Description |
-| +-------+ | +--------+ |
+|-------|--------|
 | SPC tv | Run Current File |
 | SPC ts | Run Nearest test |
 | SPC tr | Run Last Test |
@@ -96,7 +96,7 @@ After this, have an nice work!
 See more: https://www.youtube.com/watch?v=NZO8KjNbwJk
 
 | Command | Description |
-| +-------+ | +--------+ |
+|-------|--------|
 | C-s (On Vim, in visual mode) | Send selected text to rails console |
 | C-a 1,2,3,4 | Switch tmux window |
 | C-a w | View and tmux windows |
