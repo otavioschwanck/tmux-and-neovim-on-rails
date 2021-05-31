@@ -105,6 +105,3 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 " format on enter, <cr> could be remapped by other vim plugin
 inoremap <silent><expr> <C-Space> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-
-nmap <C-j> ]m
-nmap <C-k> [m

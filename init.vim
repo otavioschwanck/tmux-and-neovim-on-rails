@@ -369,3 +369,13 @@ nmap <Leader>fD :Unlink
 nmap <Leader>fR :Rename 
 nnoremap 0 ^
 vmap 0 ^
+
+https://github.com/otavioschwanck/tmux-and-neovim-on-rails
+
+nnoremap 0 ^
+
+nmap <C-j> ]m
+nmap <C-k> [m
+vmap <C-j> ]m
+vmap <C-k> [m
+ 
