@@ -350,8 +350,8 @@ nmap <leader>P <Plug>yankstack_substitute_newer_paste
 
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 
-nmap <Leader>s <Plug>(easymotion-overwin-f2) 
-vmap <Leader>s <Plug>(easymotion-overwin-f2)
+nmap <M-s> <Plug>(easymotion-overwin-f2) 
+vmap <M-s> <Plug>(easymotion-overwin-f2)
 
 " Change tabs with alt
 " Airline
